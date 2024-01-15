@@ -118,6 +118,7 @@ CORS_OPTIONS = {
   'resources':['*'],
   'origins': ['http://localhost:8088', 'http://localhost:8888']
 }
+SUPERSET_FEATURE_EMBEDDED_SUPERSET=True
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
