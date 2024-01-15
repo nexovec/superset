@@ -74,13 +74,15 @@ services:
     volumes: *superset-volumes
   superset-worker:
     image: *superset-image
-    container_name: superset_worker
+    # container_name: superset_worker
     command: ["/app/docker/docker-bootstrap.sh", "worker"]
     env_file: docker/.env-non-dev
     restart: unless-stopped
     depends_on: *superset-depends-on
     user: "root"
     volumes: *superset-volumes
+    deploy:
+      replicas: 6
     healthcheck:
       test:
         [
