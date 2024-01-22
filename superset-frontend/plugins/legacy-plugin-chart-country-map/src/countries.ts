@@ -17,6 +17,7 @@
  * under the License.
  */
 
+import czechia from './countries/czechrepublic.geojson';
 import austria from './countries/austria.geojson';
 import argentina from './countries/argentina.geojson';
 import australia from './countries/australia.geojson';
@@ -126,6 +127,7 @@ export const countries = {
   costa_rica,
   cuba,
   cyprus,
+  czechia,
   denmark,
   dominican_republic,
   ecuador,
