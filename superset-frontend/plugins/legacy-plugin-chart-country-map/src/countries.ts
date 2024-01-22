@@ -17,16 +17,8 @@
  * under the License.
  */
 
-import afghanistan from './countries/afghanistan.geojson';
-import aland from './countries/aland.geojson';
-import albania from './countries/albania.geojson';
-import algeria from './countries/algeria.geojson';
-import american_samoa from './countries/american_samoa.geojson';
-import andorra from './countries/andorra.geojson';
-import angola from './countries/angola.geojson';
-import anguilla from './countries/anguilla.geojson';
-import antarctica from './countries/antarctica.geojson';
-import antigua_and_barbuda from './countries/antigua_and_barbuda.geojson';
+import czechia from './countries/czechrepublic.geojson';
+import austria from './countries/austria.geojson';
 import argentina from './countries/argentina.geojson';
 import armenia from './countries/armenia.geojson';
 import australia from './countries/australia.geojson';
@@ -264,8 +256,7 @@ export const countries = {
   croatia,
   cuba,
   cyprus,
-  czech_republic,
-  democratic_republic_of_the_congo,
+  czechia,
   denmark,
   djibouti,
   dominica,

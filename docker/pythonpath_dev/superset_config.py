@@ -108,7 +108,6 @@ WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 SQLLAB_CTAS_NO_LIMIT = True
 
 # custom flags
-SESSION_COOKIE_SAMESITE = None
 ENABLE_PROXY_FIX = True
 PUBLIC_ROLE_LIKE_GAMMA = True
 
@@ -119,6 +118,9 @@ CORS_OPTIONS = {
   'origins': ['http://localhost:8088', 'http://localhost:8888']
 }
 SUPERSET_FEATURE_EMBEDDED_SUPERSET=True
+
+# Set this API key to enable Mapbox visualizations
+MAPBOX_API_KEY = ''
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
