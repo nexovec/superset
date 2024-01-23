@@ -28,6 +28,12 @@ under the License.
 [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](http://bit.ly/join-superset-slack)
 [![Documentation](https://img.shields.io/badge/docs-apache.org-blue.svg)](https://superset.apache.org)
 
+## Personal notes
+
+[db container backup](https://www.howtogeek.com/devops/how-to-back-up-your-docker-volumes/)
+
+## Original readme
+
 <picture width="500">
   <source
     width="600"
