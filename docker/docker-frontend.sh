@@ -22,6 +22,8 @@ apt update
 apt install -y chromium
 
 cd /app/superset-frontend
+export CYPRESS_CACHE_FOLDER=/app/.cache # defined directory for CYPRESS cache
+
 npm install -f --no-optional --global webpack webpack-cli
 npm install -f --no-optional
 

@@ -40,6 +40,14 @@ under the License.
   />
 </picture>
 
+Portabo fork of superset.
+
+## Applied fixed
+
+[fix for `UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb1 in position 0: invalid start byte`, `Invalid decryption key`](https://github.com/apache/superset/issues/18077)
+
+## Original README
+
 A modern, enterprise-ready business intelligence web application.
 
 [**Why Superset?**](#why-superset) |

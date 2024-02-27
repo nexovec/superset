@@ -201,6 +201,7 @@
     "scroll-into-view-if-needed": "^2.2.28",
     "shortid": "^2.2.16",
     "tinycolor2": "^1.4.2",
+    "ultimate-pagination": "^1.0.0",
     "urijs": "^1.19.8",
     "use-event-callback": "^0.1.0",
     "use-immer": "^0.9.0",

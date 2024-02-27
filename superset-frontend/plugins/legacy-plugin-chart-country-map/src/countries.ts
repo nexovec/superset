@@ -18,6 +18,11 @@
  */
 
 import afghanistan from './countries/afghanistan.geojson';
+import czechrepublic from './countries/czech_republic_by_kraj.geojson';
+import czechrepublicnuts2 from './countries/czech_republic_by_nuts2.geojson';
+import czechrepublicokres from './countries/czech_republic_by_okres.geojson';
+import czechrepublicorp from './countries/czech_republic_by_orp.geojson';
+import czechrepublicobec from './countries/czech_republic_by_obec.geojson';
 import albania from './countries/albania.geojson';
 import algeria from './countries/algeria.geojson';
 import argentina from './countries/argentina.geojson';
@@ -114,12 +119,17 @@ import vietnam from './countries/vietnam.geojson';
 import zambia from './countries/zambia.geojson';
 
 export const countries = {
+  czechrepublic,
+  czechrepublicnuts2,
+  czechrepublicokres,
+  czechrepublicorp,
+  czechrepublicobec,
+  austria,
   afghanistan,
   albania,
   algeria,
   argentina,
   australia,
-  austria,
   belgium,
   bolivia,
   brazil,
@@ -220,6 +230,21 @@ export const countryOptions = Object.keys(countries).map(x => {
   }
   if (x === 'france_regions') {
     return [x, 'France (regions)'];
+  }
+  if (x === 'czechrepublic') {
+    return [x, 'Czech Republic Kraje'];
+  }
+  if (x === 'czechrepublicnuts2') {
+    return [x, 'Czech Republic NUTS2'];
+  }
+  if (x === 'czechrepublicokres') {
+    return [x, 'Czech Republic Okresy'];
+  }
+  if (x === 'czechrepublicorp') {
+    return [x, 'Czech Republic ORP'];
+  }
+  if (x === 'czechrepublicobec') {
+    return [x, 'Czech Republic Obec'];
   }
   return [
     x,
