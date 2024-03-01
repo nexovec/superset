@@ -117,6 +117,6 @@ except ImportError:
 LANGUAGES = {
     'en': {'flag': 'us', 'name': 'English'},
     'de': {'flag': 'de', 'name': 'German'},
-    'cs': {'flag': 'cs', 'name': 'Czech'},
+    'cs': {'flag': 'cz', 'name': 'Czech'},
     'sk': {'flag': 'sk', 'name': 'Slovak'},
 }
