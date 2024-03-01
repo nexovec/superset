@@ -42,9 +42,20 @@ under the License.
 
 Portabo fork of superset.
 
-## Applied fixed
+## Common fixes(applied if possible)
 
 [fix for `UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb1 in position 0: invalid start byte`, `Invalid decryption key`](https://github.com/apache/superset/issues/18077)
+
+## Maintenance guide
+
+### Translations
+
+```sh
+pip install pybabel
+pybabel compile -d superset/translations
+```
+
+More detailed guide [here](https://superset.apache.org/docs/contributing/translations/#updating-language-files)
 
 ## Original README
 

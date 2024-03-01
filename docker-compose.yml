@@ -47,7 +47,6 @@ services:
       - "127.0.0.1:6379:6379"
     volumes:
       - redis:/data
-
   db:
     env_file: docker/.env
     image: postgres:15
@@ -130,13 +129,15 @@ services:
 
   superset-worker:
     image: *superset-image
-    container_name: superset_worker
+    # container_name: superset_worker
     command: ["/app/docker/docker-bootstrap.sh", "worker"]
     env_file: docker/.env
     restart: unless-stopped
     depends_on: *superset-depends-on
     user: *superset-user
     volumes: *superset-volumes
+    deploy:
+      replicas: 6
     extra_hosts:
       - "host.docker.internal:host-gateway"
     healthcheck:
