@@ -138,3 +138,20 @@ LANGUAGES = {
     'cs': {'flag': 'cz', 'name': 'Czech'},
     'sk': {'flag': 'sk', 'name': 'Slovak'},
 }
+
+# from flask_appbuilder.security.manager import AUTH_OAUTH
+
+# AUTH_TYPE = AUTH_OAUTH
+# OAUTH_PROVIDERS = [{
+#     'name':'openid',
+#     'token_key':'access_token',
+#     'icon':'fa-google',
+#     'remote_app': {
+#         'client_id':'YOUR_CLIENT_ID',
+#         'client_secret':'YOUR_CLIENT_SECRET',
+#         'api_base_url':'http:keycloak:8080/auth/realms/master',
+#         'client_kwargs':{
+#             'scope': 'openid email profile'
+#         },
+#     }
+# }]

@@ -23,6 +23,9 @@ import czechrepublicnuts2 from './countries/czech_republic_by_nuts2.geojson';
 import czechrepublicokres from './countries/czech_republic_by_okres.geojson';
 import czechrepublicorp from './countries/czech_republic_by_orp.geojson';
 import czechrepublicobec from './countries/czech_republic_by_obec.geojson';
+import usteckykrajbyobce from './countries/ustecky_kraj_by_obce.geojson';
+import usteckykrajbyorp from './countries/ustecky_kraj_by_orp.geojson';
+import katastralniuzemi from './countries/katuze.geojson';
 import albania from './countries/albania.geojson';
 import algeria from './countries/algeria.geojson';
 import argentina from './countries/argentina.geojson';
@@ -119,6 +122,9 @@ import vietnam from './countries/vietnam.geojson';
 import zambia from './countries/zambia.geojson';
 
 export const countries = {
+  usteckykrajbyobce,
+  usteckykrajbyorp,
+  katastralniuzemi,
   czechrepublic,
   czechrepublicnuts2,
   czechrepublicokres,
@@ -243,8 +249,14 @@ export const countryOptions = Object.keys(countries).map(x => {
   if (x === 'czechrepublicorp') {
     return [x, 'Czech Republic ORP'];
   }
-  if (x === 'czechrepublicobec') {
-    return [x, 'Czech Republic Obec'];
+  if (x === 'usteckykrajbyobce') {
+    return [x, 'Ustecky Kraj Obce'];
+  }
+  if (x === 'usteckykrajbyorp') {
+    return [x, 'Ustecky Kraj ORP'];
+  }
+  if (x === 'katastralniuzemi') {
+    return [x, 'Katastralni Uzemi'];
   }
   return [
     x,
