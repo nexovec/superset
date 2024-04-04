@@ -71,7 +71,7 @@ services:
   superset:
     env_file: docker/.env
     image: *superset-image
-    container_name: superset_app
+    # container_name: superset_app
     command: ["/app/docker/docker-bootstrap.sh", "app"]
     restart: unless-stopped
     ports:
@@ -85,7 +85,7 @@ services:
       CYPRESS_CONFIG: "${CYPRESS_CONFIG}"
 
   superset-websocket:
-    container_name: superset_websocket
+    # container_name: superset_websocket
     build: ./superset-websocket
     image: superset-websocket
     ports:
@@ -116,7 +116,7 @@ services:
 
   superset-init:
     image: *superset-image
-    container_name: superset_init
+    # container_name: superset_init
     command: ["/app/docker/docker-init.sh"]
     env_file: docker/.env
     depends_on: *superset-depends-on
@@ -129,7 +129,7 @@ services:
 
   superset-node:
     image: node:16
-    container_name: superset_node
+    # container_name: superset_node
     command: ["/app/docker/docker-frontend.sh"]
     env_file: docker/.env
     depends_on: *superset-depends-on
@@ -159,7 +159,7 @@ services:
 
   superset-worker-beat:
     image: *superset-image
-    container_name: superset_worker_beat
+    # container_name: superset_worker_beat
     command: ["/app/docker/docker-bootstrap.sh", "beat"]
     env_file: docker/.env
     restart: unless-stopped
@@ -171,7 +171,7 @@ services:
 
   superset-tests-worker:
     image: *superset-image
-    container_name: superset_tests_worker
+    # container_name: superset_tests_worker
     command: ["/app/docker/docker-bootstrap.sh", "worker"]
     env_file: docker/.env
     environment:
