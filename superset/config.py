@@ -559,19 +559,27 @@ COMMON_BOOTSTRAP_OVERRIDES_FUNC: Callable[
 
 # EXTRA_CATEGORICAL_COLOR_SCHEMES is used for adding custom categorical color schemes
 # example code for "My custom warm to hot" color scheme
-# EXTRA_CATEGORICAL_COLOR_SCHEMES = [
-#     {
-#         "id": 'myVisualizationColors',
-#         "description": '',
-#         "label": 'My Visualization Colors',
-#         "isDefault": True,
-#         "colors":
-#          ['#006699', '#009DD9', '#5AAA46', '#44AAAA', '#DDAA77', '#7799BB', '#88AA77',
-#          '#552288', '#5AAA46', '#CC7788', '#EEDD55', '#9977BB', '#BBAA44', '#DDCCDD']
-#     }]
-
+EXTRA_CATEGORICAL_COLOR_SCHEMES = [
+    {
+        "id": 'atlasUKsingleHue',
+        "description": 'Barevná paleta pro Tématický atlas ÚK (single hue), od nejsvětlejší po nejtmavší modrou barvu.',
+        "label": 'Barvy Atlasu ÚK (single hue)',
+        "isDefault": True,
+        "colors":
+         ['#E5E7FE', '#C9CCFF', '#AEB2FF', '#9497FF', '#7A7BFF', '#5E5EFF', '#3E3FFF', '#0010FB']
+    },
+    {
+        "id": 'atlasUKdivergent',
+        "description": 'Barevná paleta pro Tématický atlas ÚK (divergent), od oranžové (minusové) po nejtmavší (kladné) modré barvy.',
+        "label": 'Barvy Atlasu ÚK (divergent)',
+	"isDiverging": True,
+	"isDefault": False,
+        "colors":
+         ['#F5A33D', '#FBB76D', '#FDCC9B', '#FCE1C8', '#FAF6FA', '#D5BFFA', '#AD89FC', '#7A53FC', '#0010FB']
+    }
+]
 # This is merely a default
-EXTRA_CATEGORICAL_COLOR_SCHEMES: list[dict[str, Any]] = []
+# EXTRA_CATEGORICAL_COLOR_SCHEMES: list[dict[str, Any]] = []
 
 # THEME_OVERRIDES is used for adding custom theme to superset
 # example code for "My theme" custom scheme
@@ -593,20 +601,27 @@ EXTRA_CATEGORICAL_COLOR_SCHEMES: list[dict[str, Any]] = []
 THEME_OVERRIDES: dict[str, Any] = {}
 
 # EXTRA_SEQUENTIAL_COLOR_SCHEMES is used for adding custom sequential color schemes
-# EXTRA_SEQUENTIAL_COLOR_SCHEMES =  [
-#     {
-#         "id": 'warmToHot',
-#         "description": '',
-#         "isDiverging": True,
-#         "label": 'My custom warm to hot',
-#         "isDefault": True,
-#         "colors":
-#          ['#552288', '#5AAA46', '#CC7788', '#EEDD55', '#9977BB', '#BBAA44', '#DDCCDD',
-#          '#006699', '#009DD9', '#5AAA46', '#44AAAA', '#DDAA77', '#7799BB', '#88AA77']
-#     }]
-
+EXTRA_SEQUENTIAL_COLOR_SCHEMES = [
+    {
+        "id": 'atlasUKsingleHue',
+        "description": 'Barevná paleta pro Tématický atlas ÚK (single hue), od nejsvětlejší po nejtmavší modrou barvu.',
+        "label": 'Barvy Atlasu ÚK (single hue)',
+        "isDefault": True,
+        "colors":
+         ['#E5E7FE', '#C9CCFF', '#AEB2FF', '#9497FF', '#7A7BFF', '#5E5EFF', '#3E3FFF', '#0010FB']
+    },
+    {
+        "id": 'atlasUKdivergent',
+        "description": 'Barevná paleta pro Tématický atlas ÚK (divergent), od oranžové (minusové) po nejtmavší (kladné) modré barvy.',
+        "label": 'Barvy Atlasu ÚK (divergent)',
+	"isDiverging": True,
+	"isDefault": False,
+        "colors":
+         ['#F5A33D', '#FBB76D', '#FDCC9B', '#FCE1C8', '#FAF6FA', '#D5BFFA', '#AD89FC', '#7A53FC', '#0010FB']
+    }
+]
 # This is merely a default
-EXTRA_SEQUENTIAL_COLOR_SCHEMES: list[dict[str, Any]] = []
+# EXTRA_SEQUENTIAL_COLOR_SCHEMES: list[dict[str, Any]] = []
 
 # ---------------------------------------------------
 # Thumbnail config (behind feature flag)
