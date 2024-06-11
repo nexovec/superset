@@ -1,0 +1,4 @@
+# TODO: freeze versions
+clickhouse-connect
+Authlib
+flask-appbuilder
