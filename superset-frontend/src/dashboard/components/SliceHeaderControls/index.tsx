@@ -53,6 +53,7 @@ import ModalTrigger from 'src/components/ModalTrigger';
 import Button from 'src/components/Button';
 import ViewQueryModal from 'src/explore/components/controls/ViewQueryModal';
 import { ResultsPaneOnDashboard } from 'src/explore/components/DataTablesPane';
+import downloadAsImageSVG from 'src/utils/downloadAsImageSVG';
 import Modal from 'src/components/Modal';
 import { DrillDetailMenuItems } from 'src/components/Chart/DrillDetail';
 import { LOG_ACTIONS_CHART_DOWNLOAD_AS_IMAGE } from 'src/logger/LogUtils';
@@ -62,6 +63,7 @@ import { useCrossFiltersScopingModal } from '../nativeFilters/FilterBar/CrossFil
 
 const MENU_KEYS = {
   DOWNLOAD_AS_IMAGE: 'download_as_image',
+  DOWNLOAD_AS_IMAGE_SVG: 'download_as_image_svg',
   EXPLORE_CHART: 'explore_chart',
   EXPORT_CSV: 'export_csv',
   EXPORT_FULL_CSV: 'export_full_csv',
@@ -349,6 +351,26 @@ const SliceHeaderControls = (props: SliceHeaderControlsPropsWithRouter) => {
         });
         break;
       }
+      case MENU_KEYS.DOWNLOAD_AS_IMAGE_SVG: {
+        // menu closes with a delay, we need to hide it manually,
+        // so that we don't capture it on the screenshot
+        const menu = document.querySelector(
+          '.ant-dropdown:not(.ant-dropdown-hidden)',
+        ) as HTMLElement;
+        menu.style.visibility = 'hidden';
+        downloadAsImageSVG(
+          getScreenshotNodeSelector(props.slice.slice_id),
+          props.slice.slice_name,
+          true,
+          // @ts-ignore
+        )(domEvent).then(() => {
+          menu.style.visibility = 'visible';
+        });
+        props.logEvent?.(LOG_ACTIONS_CHART_DOWNLOAD_AS_IMAGE, {
+          chartId: props.slice.slice_id,
+        });
+        break;
+      }
       case MENU_KEYS.CROSS_FILTER_SCOPING: {
         openScopingModal();
         break;
@@ -552,6 +574,13 @@ const SliceHeaderControls = (props: SliceHeaderControlsPropsWithRouter) => {
             icon={<Icons.FileImageOutlined css={dropdownIconsStyles} />}
           >
             {t('Download as image')}
+          </Menu.Item>
+
+          <Menu.Item
+            key={MENU_KEYS.DOWNLOAD_AS_IMAGE_SVG}
+            icon={<Icons.FileImageOutlined css={dropdownIconsStyles} />}
+          >
+            {t('Download as image SVG')}
           </Menu.Item>
         </Menu.SubMenu>
       )}
