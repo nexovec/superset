@@ -18,6 +18,7 @@
  */
 /* eslint-disable react/sort-prop-types */
 import d3 from 'd3';
+import d3l from 'd3-svg-legend';
 import PropTypes from 'prop-types';
 import { extent as d3Extent } from 'd3-array';
 import {
@@ -159,11 +160,13 @@ function CountryMap(element, props) {
         name = feature.properties.NAME_1;
       }
     }
+    //    bigText.text(name+" big text");
     bigText.text(name);
   };
 
   const updateMetrics = function updateMetrics(region) {
     if (region.length > 0) {
+      // resultText.text(format(region[0].metric)+linearColorScale );
       resultText.text(format(region[0].metric));
     }
   };
@@ -177,7 +180,7 @@ function CountryMap(element, props) {
     d3.select(this).style('fill', c);
     selectAndDisplayNameOfRegion(d);
     const result = data.filter(
-      region => region.country_id === d.properties.ISO,
+      region => String(region.country_id) === d.properties.ISO,
     );
     updateMetrics(result);
   };
@@ -226,7 +229,35 @@ function CountryMap(element, props) {
       .on('mouseenter', mouseenter)
       .on('mouseout', mouseout)
       .on('click', clicked);
+
+    // Add color legend
+    addColorLegend(svg, linearColorScale, width, height);
   }
+  function addColorLegend(svg, colorScale, width, height) {
+    const legendWidth = width / 4;
+    const legendHeight = height / 8;
+    const legendMargin = width / 10;
+
+    svg
+      .append('g')
+      .attr('class', 'legendLinear')
+      .attr(
+        'transform',
+        `translate(${width - legendWidth - legendMargin}, ${
+          height - legendMargin - legendHeight
+        })`,
+      );
+
+    var legendLinear = d3.legend
+      .color()
+      .shapeWidth(30)
+      .cells(10)
+      .orient('vertical')
+      .scale(colorScale);
+
+    svg.select('.legendLinear').call(legendLinear);
+  }
+  //konec legend
 
   const map = maps[country];
   if (map) {
