@@ -15,7 +15,6 @@
 # specific language governing permissions and limitations
 # under the License.
 import copy
-import json
 
 import yaml
 from flask import g
@@ -26,6 +25,7 @@ from superset.commands.importers.v1.assets import ImportAssetsCommand
 from superset.commands.importers.v1.utils import is_valid_config
 from superset.models.dashboard import Dashboard
 from superset.models.slice import Slice
+from superset.utils import json
 from tests.integration_tests.base_tests import SupersetTestCase
 from tests.integration_tests.fixtures.importexport import (
     chart_config,
@@ -125,14 +125,9 @@ class TestImportAssetsCommand(SupersetTestCase):
         }
         assert json.loads(dashboard.json_metadata) == {
             "color_scheme": None,
-            "default_filters": "{}",
             "expanded_slices": {str(new_chart_id): True},
-            "filter_scopes": {
-                str(new_chart_id): {
-                    "region": {"scope": ["ROOT_ID"], "immune": [new_chart_id]}
-                },
-            },
             "import_time": 1604342885,
+            "native_filter_configuration": [],
             "refresh_frequency": 0,
             "remote_id": 7,
             "timed_refresh_immune_slices": [new_chart_id],
