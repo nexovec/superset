@@ -37,7 +37,7 @@ from superset.errors import ErrorLevel, SupersetError, SupersetErrorType
 from superset.exceptions import SupersetErrorException
 from superset.extensions import db
 from superset.models.core import Database
-from superset.sql_parse import ParsedQuery
+from superset.sql_parse import ParsedQuery, Table
 
 logger = logging.getLogger(__name__)
 
@@ -70,7 +70,10 @@ class DuplicateDatasetCommand(CreateMixin, BaseCommand):
             table.normalize_columns = self._base_model.normalize_columns
             table.always_filter_main_dttm = self._base_model.always_filter_main_dttm
             table.is_sqllab_view = True
-            table.sql = ParsedQuery(self._base_model.sql).stripped()
+            table.sql = ParsedQuery(
+                self._base_model.sql,
+                engine=database.db_engine_spec.engine,
+            ).stripped()
             db.session.add(table)
             cols = []
             for config_ in self._base_model.columns:
@@ -121,7 +124,7 @@ class DuplicateDatasetCommand(CreateMixin, BaseCommand):
             exceptions.append(DatasourceTypeInvalidError())
 
         if DatasetDAO.find_one_or_none(table_name=duplicate_name):
-            exceptions.append(DatasetExistsValidationError(table_name=duplicate_name))
+            exceptions.append(DatasetExistsValidationError(table=Table(duplicate_name)))
 
         try:
             owners = self.populate_owners()
