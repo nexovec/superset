@@ -79,9 +79,7 @@ Superset provides:
 
 **Video Overview**
 <!-- File hosted here https://github.com/apache/superset-site/raw/lfs/superset-video-4k.mp4 -->
-<video src="https://superset.staged.apache.org/superset-video-4k.mp4" width="100%" height="auto" controls preload="none">
-   https://superset.staged.apache.org/superset-video-4k.mp4
-</video>
+[superset-video-4k.webm](https://github.com/apache/superset/assets/812905/da036bc2-150c-4ee7-80f9-75e63210ff76)
 
 <br/>
 
@@ -141,6 +139,7 @@ Here are some of the major database solutions that are supported:
   <img src="https://superset.apache.org/img/databases/databend.png" alt="databend" border="0" width="200" />
   <img src="https://superset.apache.org/img/databases/starrocks.png" alt="starrocks" border="0" width="200" />
   <img src="https://superset.apache.org/img/databases/doris.png" alt="doris" border="0" width="200" />
+  <img src="https://superset.apache.org/img/databases/oceanbase.svg" alt="oceanbase" border="0" width="220" />
 </p>
 
 **A more comprehensive list of supported databases** along with the configuration instructions can be found [here](https://superset.apache.org/docs/configuration/databases).
