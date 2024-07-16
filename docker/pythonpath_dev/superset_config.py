@@ -92,10 +92,7 @@ class CeleryConfig:
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {
-    "ALERT_REPORTS": True,
-    "EMBEDDED_SUPERSET": True
-}
+FEATURE_FLAGS = {"ALERT_REPORTS": True, "EMBEDDED_SUPERSET": True}
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"  # When using docker compose baseurl should be http://superset_app:8088/
 # The base URL for the email report hyperlinks.
@@ -107,15 +104,15 @@ ENABLE_PROXY_FIX = True
 PUBLIC_ROLE_LIKE_GAMMA = True
 
 CORS_OPTIONS = {
-  'supports_credentials': True,
-  'allow_headers': ['*'],
-  'resources':['*'],
-  'origins': ['http://localhost:8088', 'http://localhost:8888']
+    "supports_credentials": True,
+    "allow_headers": ["*"],
+    "resources": ["*"],
+    "origins": ["http://localhost:8088", "http://localhost:8888"],
 }
-SUPERSET_FEATURE_EMBEDDED_SUPERSET=True
+SUPERSET_FEATURE_EMBEDDED_SUPERSET = True
 
 # Set this API key to enable Mapbox visualizations
-MAPBOX_API_KEY = ''
+MAPBOX_API_KEY = ""
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
@@ -130,3 +127,46 @@ try:
     )
 except ImportError:
     logger.info("Using default Docker config...")
+
+# Set this API key to enable Mapbox visualizations
+MAPBOX_API_KEY = ""
+
+LOG_LEVEL = "DEBUG"
+
+from flask_appbuilder.security.manager import AUTH_OAUTH
+
+# Enable OAuth authentication
+AUTH_TYPE = AUTH_OAUTH
+LOGOUT_REDIRECT_URL = (
+    "http://localhost:8080/realms/etikos/protocol/openid-connect/logout"
+)
+# AUTH_USER_REGISTRATION_ROLE = 'Admin'
+AUTH_USER_REGISTRATION = True
+AUTH_USER_REGISTRATION_ROLE = "Gamma"
+AUTH_ROLES_SYNC_AT_LOGIN = True
+AUTH_ROLES_MAPPING = {
+    "Superset_Admin": ["Admin"],
+    "Superset_Alpha": ["Alpha"],
+    "Superset_Gamma": ["Gamma"],
+    "Superset_sql_lab": ["sql_lab"],
+    "Superset_Obchod": ["Obchod"],
+}
+
+# OAuth provider configuration for Keycloak
+OAUTH_PROVIDERS = [
+    {
+        "name": "keycloak",
+        "icon": "fa-key",
+        "token_key": "access_token",  # Keycloak uses 'access_token' for the access token
+        "remote_app": {
+            "client_id": "superset",
+            "client_secret": "2vF08d2BlT8XtCLIlQQifIiXi2X5ZRNl",
+            "client_kwargs": {
+                "scope": "openid profile email",
+            },
+            "server_metadata_url": "http://localhost:8080/realms/etikos/.well-known/openid-configuration",
+            "api_base_url": "http://localhost:8080/realms/etikos/protocol/",
+            "redirect_uri": "http://192.168.27.207:8088/login/callback/keycloak"
+        },
+    }
+]
