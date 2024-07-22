@@ -138,7 +138,7 @@ from flask_appbuilder.security.manager import AUTH_OAUTH
 # Enable OAuth authentication
 AUTH_TYPE = AUTH_OAUTH
 LOGOUT_REDIRECT_URL = (
-    "http://localhost:8080/realms/etikos/protocol/openid-connect/logout"
+    "http://192.168.27.55/realms/etikos/protocol/openid-connect/logout"
 )
 # AUTH_USER_REGISTRATION_ROLE = 'Admin'
 AUTH_USER_REGISTRATION = True
@@ -164,9 +164,13 @@ OAUTH_PROVIDERS = [
             "client_kwargs": {
                 "scope": "openid profile email",
             },
-            "server_metadata_url": "http://localhost:8080/realms/etikos/.well-known/openid-configuration",
-            "api_base_url": "http://localhost:8080/realms/etikos/protocol/",
-            "redirect_uri": "http://192.168.27.207:8088/login/callback/keycloak"
+            "server_metadata_url": "http://192.168.27.55/realms/etikos/.well-known/openid-configuration",
+            "api_base_url": "http://192.168.27.55/realms/etikos/protocol/",
         },
     }
 ]
+
+LANGUAGES = {
+    "en":{"flag":"us", "name": "English"},
+    "cs":{"flag":"cz", "name": "Čeština"}
+}
