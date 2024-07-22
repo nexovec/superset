@@ -17,16 +17,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-03 14:07-0700\n"
+"POT-Creation-Date: 2024-07-22 18:09+0200\n"
 "PO-Revision-Date: 2016-05-02 08:49-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 msgid ""
 "\n"
@@ -8959,6 +8959,9 @@ msgstr ""
 msgid "Shift + Click to sort by multiple columns"
 msgstr ""
 
+msgid "Shift start date"
+msgstr ""
+
 msgid "Short description must be unique for this layer"
 msgstr ""
 
@@ -10513,7 +10516,7 @@ msgstr ""
 msgid "There was an error fetching the favorite status: %s"
 msgstr ""
 
-msgid "There was an error fetching your recent activity:"
+msgid "There was an error fetching the filtered charts and dashboards:"
 msgstr ""
 
 msgid "There was an error loading the catalogs"
@@ -11340,6 +11343,10 @@ msgstr ""
 
 #, python-format
 msgid "Unknown MySQL server host \"%(hostname)s\"."
+msgstr ""
+
+#, python-format
+msgid "Unknown OceanBase server host \"%(hostname)s\"."
 msgstr ""
 
 msgid "Unknown Presto Error"

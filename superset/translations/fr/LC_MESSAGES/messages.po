@@ -17,16 +17,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-03 14:07-0700\n"
+"POT-Creation-Date: 2024-07-22 18:09+0200\n"
 "PO-Revision-Date: 2021-11-16 17:33+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 msgid ""
 "\n"
@@ -10485,6 +10485,9 @@ msgstr "Nom de feuille"
 msgid "Shift + Click to sort by multiple columns"
 msgstr "Shift + clic pour classer par plusieurs colonnes"
 
+msgid "Shift start date"
+msgstr ""
+
 msgid "Short description must be unique for this layer"
 msgstr "La description courte doit être unique pour cette couche"
 
@@ -12426,10 +12429,8 @@ msgstr ""
 msgid "There was an error fetching the favorite status: %s"
 msgstr "Erreur à la récupération du statut favori de ce tableau de bord : %s"
 
-msgid "There was an error fetching your recent activity:"
+msgid "There was an error fetching the filtered charts and dashboards:"
 msgstr ""
-"Une erreur s'est produite lors de lors de la récupération de votre "
-"activité récente :"
 
 #, fuzzy
 msgid "There was an error loading the catalogs"
@@ -13451,6 +13452,10 @@ msgstr "Hôte MySQL \"%(hostname)s\" inconnu."
 #, python-format
 msgid "Unknown MySQL server host \"%(hostname)s\"."
 msgstr "Hôte inconnu du serveur MySQL « %(hostname)s »"
+
+#, python-format
+msgid "Unknown OceanBase server host \"%(hostname)s\"."
+msgstr ""
 
 msgid "Unknown Presto Error"
 msgstr "Erreur Presto inconnue"
