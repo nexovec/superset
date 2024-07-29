@@ -1,0 +1,145 @@
+{
+    "realm" : "etikos",
+    "users" : [ {
+      "id" : "40f700aa-4c5f-4965-9b66-897e29daaa09",
+      "username" : "pokadm",
+      "firstName" : "aa",
+      "lastName" : "ss",
+      "email" : "pok1@portabo.cz",
+      "emailVerified" : true,
+      "createdTimestamp" : 1720894200390,
+      "enabled" : true,
+      "totp" : false,
+      "credentials" : [ {
+        "id" : "8bd1e46b-374c-4c4a-bb1b-ae2509bd3eaf",
+        "type" : "password",
+        "userLabel" : "My password",
+        "createdDate" : 1720894250114,
+        "secretData" : "{\"value\":\"dt9p5hdMOCFSYm4MmXHABALNL5WedF8WOxM5OgNBHks=\",\"salt\":\"y5GM+rZ+Iyq2qXs3CYgf8Q==\",\"additionalParameters\":{}}",
+        "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+      } ],
+      "disableableCredentialTypes" : [ ],
+      "requiredActions" : [ ],
+      "realmRoles" : [ "default-roles-etikos" ],
+      "clientConsents" : [ {
+        "clientId" : "superset",
+        "grantedClientScopes" : [ "email", "roles", "superset", "profile" ],
+        "createdDate" : 1720894376334,
+        "lastUpdatedDate" : 1720894376337
+      } ],
+      "notBefore" : 0,
+      "groups" : [ "/Superset_Admin" ]
+    }, {
+      "id" : "c0fefa4b-7b86-46d0-869e-a18ac6bb52e3",
+      "username" : "pokus",
+      "firstName" : "a",
+      "lastName" : "a",
+      "email" : "a@a.cz",
+      "emailVerified" : false,
+      "createdTimestamp" : 1720889823799,
+      "enabled" : true,
+      "totp" : false,
+      "credentials" : [ {
+        "id" : "c5655239-4492-43b1-8719-a093ea93b672",
+        "type" : "password",
+        "userLabel" : "My password",
+        "createdDate" : 1720889847162,
+        "secretData" : "{\"value\":\"jkJIlcNUJfMOM5169Kq6J8SiAMqsPgmm/T6ZsluoKCU=\",\"salt\":\"kJGifRNrzFbcOiTej7j0qg==\",\"additionalParameters\":{}}",
+        "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+      } ],
+      "disableableCredentialTypes" : [ ],
+      "requiredActions" : [ ],
+      "realmRoles" : [ "Superset_Admin", "default-roles-etikos" ],
+      "clientRoles" : {
+        "superset" : [ "Superset_Obchod" ]
+      },
+      "clientConsents" : [ {
+        "clientId" : "superset",
+        "grantedClientScopes" : [ "email", "roles", "superset", "profile" ],
+        "createdDate" : 1720889900883,
+        "lastUpdatedDate" : 1720889900889
+      } ],
+      "notBefore" : 0,
+      "groups" : [ "/Superset_Admin" ]
+    }, {
+      "id" : "8171b747-3e0f-45ee-9fda-82c8a95cc543",
+      "username" : "roman",
+      "firstName" : "Roman",
+      "lastName" : "Vaibar",
+      "email" : "rvaibar@gmail.com",
+      "emailVerified" : true,
+      "createdTimestamp" : 1720873053426,
+      "enabled" : true,
+      "totp" : false,
+      "credentials" : [ {
+        "id" : "ab185613-5b16-4c72-bd32-dc0ac3cebb75",
+        "type" : "password",
+        "userLabel" : "My password",
+        "createdDate" : 1720873076969,
+        "secretData" : "{\"value\":\"Dl7Z9hO+is2YBw53Bz8OEjeSsc2FohhIgVeMNAgcu84=\",\"salt\":\"qKSp8fHbbQm3LDvPf79Vww==\",\"additionalParameters\":{}}",
+        "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+      } ],
+      "disableableCredentialTypes" : [ ],
+      "requiredActions" : [ ],
+      "realmRoles" : [ "default-roles-etikos" ],
+      "clientRoles" : {
+        "realm-management" : [ "query-users", "query-groups", "manage-users", "view-users" ],
+        "superset" : [ "Superset_sql_lab", "Superset_Gamma", "Superset_Admin" ],
+        "account" : [ "view-groups" ]
+      },
+      "clientConsents" : [ {
+        "clientId" : "superset",
+        "grantedClientScopes" : [ "email", "roles", "superset", "profile" ],
+        "createdDate" : 1720883969148,
+        "lastUpdatedDate" : 1720883969151
+      } ],
+      "notBefore" : 0,
+      "groups" : [ "/Superset_Admin" ]
+    }, {
+      "id" : "1e09490e-00a2-4fb0-bddc-f8924a0c9671",
+      "username" : "romanadmin",
+      "firstName" : "Roman",
+      "lastName" : "Admin Supersetu",
+      "email" : "roman.vaibar@drakisa.cz",
+      "emailVerified" : true,
+      "createdTimestamp" : 1720874892889,
+      "enabled" : true,
+      "totp" : false,
+      "credentials" : [ {
+        "id" : "fbf82d50-2f15-4f67-a45e-2095a34f4f88",
+        "type" : "password",
+        "userLabel" : "My password",
+        "createdDate" : 1720874908924,
+        "secretData" : "{\"value\":\"Ew0Re3Xy0IeV8OZ+oUMPUb7yVhTdF/2e4C/cUTxVlC8=\",\"salt\":\"sPLdAzw9x6HoGbiCwjtGBg==\",\"additionalParameters\":{}}",
+        "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+      } ],
+      "disableableCredentialTypes" : [ ],
+      "requiredActions" : [ ],
+      "realmRoles" : [ "Superset_Admin", "default-roles-etikos" ],
+      "notBefore" : 0,
+      "groups" : [ ]
+    }, {
+      "id" : "2f516d44-64c5-4b8f-8f64-b8e54f17d9aa",
+      "username" : "supersetadmin",
+      "firstName" : "Superset",
+      "lastName" : "Admin",
+      "email" : "roman.vaibar@portabo.cz",
+      "emailVerified" : true,
+      "createdTimestamp" : 1720873350253,
+      "enabled" : true,
+      "totp" : false,
+      "credentials" : [ {
+        "id" : "b9b41740-d37d-4a7c-9149-024d944b6b46",
+        "type" : "password",
+        "userLabel" : "My password",
+        "createdDate" : 1720873381233,
+        "secretData" : "{\"value\":\"eDO9A5PvRhsu9ECdG1dyHkzsa7tIPo+1BG/uOJ0jpHI=\",\"salt\":\"0gq/PF8kufDgzR4szowKoQ==\",\"additionalParameters\":{}}",
+        "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+      } ],
+      "disableableCredentialTypes" : [ ],
+      "requiredActions" : [ ],
+      "realmRoles" : [ "default-roles-etikos" ],
+      "notBefore" : 0,
+      "groups" : [ ]
+    } ]
+  }
