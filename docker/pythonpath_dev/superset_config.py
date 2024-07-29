@@ -41,6 +41,11 @@ EXAMPLES_HOST = os.getenv("EXAMPLES_HOST")
 EXAMPLES_PORT = os.getenv("EXAMPLES_PORT")
 EXAMPLES_DB = os.getenv("EXAMPLES_DB")
 
+KC_SERVER_METADATA_URL = os.getenv("SERVER_METADATA_URL")
+KC_API_BASE_URL = os.getenv("API_BASE_URL")
+LOGOUT_REDIRECT_URL = os.getenv("LOGOUT_REDIRECT_URL")
+KC_CLIENT_SECRET = os.getenv("KC_CLIENT_SECRET")
+
 # The SQLAlchemy connection string.
 SQLALCHEMY_DATABASE_URI = (
     f"{DATABASE_DIALECT}://"
@@ -112,7 +117,7 @@ CORS_OPTIONS = {
     "supports_credentials": True,
     "allow_headers": ["*"],
     "resources": ["*"],
-    "origins": ["http://localhost:8088", "http://localhost:8888"],
+    "origins": ["*"],
 }
 SUPERSET_FEATURE_EMBEDDED_SUPERSET = True
 
@@ -142,9 +147,6 @@ from flask_appbuilder.security.manager import AUTH_OAUTH
 
 # Enable OAuth authentication
 AUTH_TYPE = AUTH_OAUTH
-LOGOUT_REDIRECT_URL = (
-    "http://192.168.27.55/realms/etikos/protocol/openid-connect/logout"
-)
 # AUTH_USER_REGISTRATION_ROLE = 'Admin'
 AUTH_USER_REGISTRATION = True
 AUTH_USER_REGISTRATION_ROLE = "Gamma"
@@ -165,12 +167,12 @@ OAUTH_PROVIDERS = [
         "token_key": "access_token",  # Keycloak uses 'access_token' for the access token
         "remote_app": {
             "client_id": "superset",
-            "client_secret": "2vF08d2BlT8XtCLIlQQifIiXi2X5ZRNl",
+            "client_secret": KC_CLIENT_SECRET,
             "client_kwargs": {
                 "scope": "openid profile email",
             },
-            "server_metadata_url": "http://192.168.27.55/realms/etikos/.well-known/openid-configuration",
-            "api_base_url": "http://192.168.27.55/realms/etikos/protocol/",
+            "server_metadata_url": KC_SERVER_METADATA_URL,
+            "api_base_url": KC_API_BASE_URL,
         },
     }
 ]
