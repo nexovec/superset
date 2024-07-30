@@ -41,10 +41,10 @@ EXAMPLES_HOST = os.getenv("EXAMPLES_HOST")
 EXAMPLES_PORT = os.getenv("EXAMPLES_PORT")
 EXAMPLES_DB = os.getenv("EXAMPLES_DB")
 
-KC_SERVER_METADATA_URL = os.getenv("SERVER_METADATA_URL")
-KC_API_BASE_URL = os.getenv("API_BASE_URL")
-LOGOUT_REDIRECT_URL = os.getenv("LOGOUT_REDIRECT_URL")
-KC_CLIENT_SECRET = os.getenv("KC_CLIENT_SECRET")
+SERVER_METADATA_URL = os.getenv("KC_SERVER_METADATA_URL")
+API_BASE_URL = os.getenv("KC_API_BASE_URL")
+CLIENT_SECRET = os.getenv("KC_CLIENT_SECRET")
+LOGOUT_REDIRECT_URL = os.getenv("KC_LOGOUT_REDIRECT_URL")
 
 # The SQLAlchemy connection string.
 SQLALCHEMY_DATABASE_URI = (
@@ -167,12 +167,12 @@ OAUTH_PROVIDERS = [
         "token_key": "access_token",  # Keycloak uses 'access_token' for the access token
         "remote_app": {
             "client_id": "superset",
-            "client_secret": KC_CLIENT_SECRET,
+            "client_secret": CLIENT_SECRET,
             "client_kwargs": {
                 "scope": "openid profile email",
             },
-            "server_metadata_url": KC_SERVER_METADATA_URL,
-            "api_base_url": KC_API_BASE_URL,
+            "server_metadata_url": SERVER_METADATA_URL,
+            "api_base_url": API_BASE_URL
         },
     }
 ]
