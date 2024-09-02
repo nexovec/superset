@@ -259,6 +259,7 @@ WTF_CSRF_EXEMPT_LIST = [
     "superset.views.core.log",
     "superset.views.core.explore_json",
     "superset.charts.data.api.data",
+    "superset.dashboards.api.cache_dashboard_screenshot",
 ]
 
 # Whether to run the web server in debug mode or not
@@ -484,6 +485,7 @@ DEFAULT_FEATURE_FLAGS: dict[str, bool] = {
     # Enables Alerts and reports new implementation
     "ALERT_REPORTS": False,
     "ALERT_REPORT_TABS": False,
+    "ALERT_REPORT_SLACK_V2": False,
     "DASHBOARD_RBAC": False,
     "ENABLE_ADVANCED_DATA_TYPES": False,
     # Enabling ALERTS_ATTACH_REPORTS, the system sends email and slack message
@@ -981,7 +983,12 @@ CELERY_BEAT_SCHEDULER_EXPIRES = timedelta(weeks=1)
 
 class CeleryConfig:  # pylint: disable=too-few-public-methods
     broker_url = "sqla+sqlite:///celerydb.sqlite"
-    imports = ("superset.sql_lab", "superset.tasks.scheduler")
+    imports = (
+        "superset.sql_lab",
+        "superset.tasks.scheduler",
+        "superset.tasks.thumbnails",
+        "superset.tasks.cache",
+    )
     result_backend = "db+sqlite:///celery_results.sqlite"
     worker_prefetch_multiplier = 1
     task_acks_late = False
@@ -1000,6 +1007,12 @@ class CeleryConfig:  # pylint: disable=too-few-public-methods
             "task": "reports.prune_log",
             "schedule": crontab(minute=0, hour=0),
         },
+        # Uncomment to enable pruning of the query table
+        # "prune_query": {
+        #     "task": "prune_query",
+        #     "schedule": crontab(minute=0, hour=0, day_of_month=1),
+        #     "options": {"retention_period_days": 180},
+        # },
     }
 
 
@@ -1175,7 +1188,6 @@ CONFIG_PATH_ENV_VAR = "SUPERSET_CONFIG_PATH"
 FLASK_APP_MUTATOR = None
 
 # smtp server configuration
-EMAIL_NOTIFICATIONS = False  # all the emails are sent using dryrun
 SMTP_HOST = "localhost"
 SMTP_STARTTLS = True
 SMTP_SSL = False
@@ -1684,6 +1696,28 @@ GLOBAL_ASYNC_QUERIES_POLLING_DELAY = int(
     timedelta(milliseconds=500).total_seconds() * 1000
 )
 GLOBAL_ASYNC_QUERIES_WEBSOCKET_URL = "ws://127.0.0.1:8080/"
+
+# Global async queries cache backend configuration options:
+# - Set 'CACHE_TYPE' to 'RedisCache' for RedisCacheBackend.
+# - Set 'CACHE_TYPE' to 'RedisSentinelCache' for RedisSentinelCacheBackend.
+# - Set 'CACHE_TYPE' to 'None' to fall back on 'GLOBAL_ASYNC_QUERIES_REDIS_CONFIG'.
+GLOBAL_ASYNC_QUERIES_CACHE_BACKEND = {
+    "CACHE_TYPE": "RedisCache",
+    "CACHE_REDIS_HOST": "localhost",
+    "CACHE_REDIS_PORT": 6379,
+    "CACHE_REDIS_USER": "",
+    "CACHE_REDIS_PASSWORD": "",
+    "CACHE_REDIS_DB": 0,
+    "CACHE_DEFAULT_TIMEOUT": 300,
+    "CACHE_REDIS_SENTINELS": [("localhost", 26379)],
+    "CACHE_REDIS_SENTINEL_MASTER": "mymaster",
+    "CACHE_REDIS_SENTINEL_PASSWORD": None,
+    "CACHE_REDIS_SSL": False,  # True or False
+    "CACHE_REDIS_SSL_CERTFILE": None,
+    "CACHE_REDIS_SSL_KEYFILE": None,
+    "CACHE_REDIS_SSL_CERT_REQS": "required",
+    "CACHE_REDIS_SSL_CA_CERTS": None,
+}
 
 # Embedded config options
 GUEST_ROLE_NAME = "Public"
