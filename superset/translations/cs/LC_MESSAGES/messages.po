@@ -201,17 +201,10 @@ msgid ""
 msgstr ""
 
 msgid "%(suggestion)s instead of \"%(undefinedParameter)s?\""
-<<<<<<< HEAD
 msgid_plural "%(firstSuggestions)s or %(lastSuggestion)s instead of \"%(undefinedParameter)s\"?"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-=======
-msgid_plural "%(firstSuggestions)s or %(lastSuggestion)s instead of "%(undefinedParameter)s"?"
-msgstr[0] "%(suggestion)s instead of "%(undefinedParameter)s?""
-msgstr[1] "%(firstSuggestions)s or %(lastSuggestion)s instead of "%(undefinedParameter)s"?"
-msgstr[2] "%(firstSuggestions)s or %(lastSuggestion)s instead of "%(undefinedParameter)s"?"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "%(type)s File"
 msgstr "%(type)s Soubor"
@@ -4681,19 +4674,12 @@ msgid "Format SQL"
 msgstr "Formát SQL"
 
 msgid ""
-<<<<<<< HEAD
 "Format data labels. Use variables: {name}, {value}, {percent}. \n"
 " represents a new line. ECharts compatibility:\n"
 "{a} (series), {b} (name), {c} (value), {d} (percentage)"
 msgstr ""
 "Format data labels. Use variables: {name}, {value}, {percent}. \n"
 " represents a new line. ECharts compatibility:\n"
-=======
-"Format data labels. Use variables: {name}, {value}, {percent}. \n represents a new line. ECharts compatibility:\n"
-"{a} (series), {b} (name), {c} (value), {d} (percentage)"
-msgstr ""
-"Format data labels. Use variables: {name}, {value}, {percent}. \n represents a new line. ECharts compatibility:\n"
->>>>>>> cff72b9101 (added czech translation)
 "{a} (series), {b} (name), {c} (value), {d} (percentage)"
 
 msgid "Formatted CSV attached in email"
@@ -5432,11 +5418,7 @@ msgid "Latitude of default viewport"
 msgstr "Zeměpisná šířka výchozího pohledu"
 
 msgid "Layer configuration"
-<<<<<<< HEAD
 msgstr "Konfigurace vrstvy"
-=======
-msgstr "konfigurace vrstvy"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Layout"
 msgstr "Rozvržení"
@@ -5511,11 +5493,7 @@ msgid "Like"
 msgstr "Like"
 
 msgid "Like (case insensitive)"
-<<<<<<< HEAD
 msgstr "LIKE (case insensitive)"
-=======
-msgstr "Like (case insensitive)"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Limit type"
 msgstr "Typ Limitu"
@@ -6214,11 +6192,7 @@ msgid "No compatible columns found"
 msgstr "Kompatibilní sloupce nenalezeny"
 
 msgid "No compatible datasets found"
-<<<<<<< HEAD
 msgstr "Kompatibilní datové sady nenalezeny"
-=======
-msgstr "žádný kompatibilní dataset nenalezen"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "No compatible schema found"
 msgstr "Žádné kompatibilní schéma nenalezeno"
@@ -6365,11 +6339,7 @@ msgid "Not a valid ZIP file"
 msgstr "Není platný ZIP soubor"
 
 msgid "Not added to any dashboard"
-<<<<<<< HEAD
 msgstr "Nebylo přidáno do ždáného dashboardu"
-=======
-msgstr "Nebylo přidáno k žádným "
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Not all required fields are complete. Please provide the following:"
 msgstr "Not all required fields are complete. Please provide the following:"
@@ -7227,11 +7197,7 @@ msgid "Query in a new tab"
 msgstr "Dotaz v nové kartě"
 
 msgid "Query is too complex and takes too long to run."
-<<<<<<< HEAD
 msgstr "Dotaz je příliš složitý a jeho vykonání trvá příliš dlouho."
-=======
-msgstr "Dotaz je příliš složitý a jeho vykonání trvá příliš dlouho"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Query mode"
 msgstr "Mód dotazu"
@@ -7255,11 +7221,7 @@ msgid "RGB Color"
 msgstr "RGB Barva"
 
 msgid "RLS Rule not found."
-<<<<<<< HEAD
 msgstr "RLS Pravidlo nenalezeno."
-=======
-msgstr "RLS Pravidlo nenalezeno"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "RLS rules could not be deleted."
 msgstr "RLS pravidla nešlo smazat."
@@ -7565,11 +7527,7 @@ msgid "Resample"
 msgstr "Převzorkovat"
 
 msgid "Resample method should be in "
-<<<<<<< HEAD
 msgstr "Převzorkovací metoda by měla být v "
-=======
-msgstr "Převzorkovací metoda by měla být v"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Resample operation requires DatetimeIndex"
 msgstr "Převzorkovací operace vyžaduje DatetimeIndex"
@@ -7608,11 +7566,7 @@ msgid "Reverse Lat & Long"
 msgstr "Prohodit Lat & Long"
 
 msgid "Reverse lat/long "
-<<<<<<< HEAD
 msgstr "Prohodit lat/long "
-=======
-msgstr "Prohodit lat/long"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Rich Tooltip"
 msgstr "Bohatá nápověda"
@@ -8041,11 +7995,7 @@ msgid "Scroll"
 msgstr "Scroll"
 
 msgid "Scroll down to the bottom to enable overwriting changes. "
-<<<<<<< HEAD
 msgstr "Scrollovat dolů na konec pro umožnění přepisujících změn. "
-=======
-msgstr "Scrollovat dolů na konec pro umožnění přepisujících změn."
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Search"
 msgstr "Hledání"
@@ -8721,11 +8671,7 @@ msgid "Sorry there was an error fetching database information: %s"
 msgstr "Omlouváme se, nastala chyba v dohledávání informací o databázi: %s"
 
 msgid "Sorry there was an error fetching saved charts: "
-<<<<<<< HEAD
 msgstr "Omlouváme se, nastala chyba v dohledávání uložených grafů: "
-=======
-msgstr "Omlouváme se, nastala chyba v dohledávání uložených grafů:"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Sorry, An error occurred"
 msgstr "Omlouváme se, nastala chyba"
@@ -9514,15 +9460,6 @@ msgstr "Metadata_params v poli Extra nebyl správně nakonfigurován. Klíš %{k
 
 msgid "The metadata_params object gets unpacked into the sqlalchemy.MetaData call."
 msgstr "Metadata_params objekt se rozbalí do sqlalchemy.MetaData volání."
-=======
-msgstr "metadata_params v poli Extra není správně nakonfigurován. Klíč %(key)s je neplatný."
-
-msgid "The metadata_params in Extra field is not configured correctly. The key %{key}s is invalid."
-msgstr "metadata_params v poli Extra nebyl správně nakonfigurován. Klíš %{key}s je neplatný."
-
-msgid "The metadata_params object gets unpacked into the sqlalchemy.MetaData call."
-msgstr "metadata_params objekt se rozbalí do sqlalchemy.MetaData volání."
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "The minimum number of rolling periods required to show a value. For instance if you do a cumulative sum on 7 days you may want your \"Min Period\" to be 7, so that all data points shown are the total of 7 periods. This will hide the \"ramp up\" taking place over the first 7 periods"
 msgstr "The minimum number of rolling periods required to show a value. For instance if you do a cumulative sum on 7 days you may want your \"Min Period\" to be 7, so that all data points shown are the total of 7 periods. This will hide the \"ramp up\" taking place over the first 7 periods"
@@ -9591,11 +9528,7 @@ msgid "The passwords for the databases below are needed in order to import them.
 msgstr "K importu databází níže jsou zapotřebí hesla. Vezměte prosím na vědomí, že sekce \"Secure Extra\" a \"Certificate\" konfigurace databáze nejsou obsaženy v souborech průzkumu a měly by být přidány ručně po importu, pokud jsou potřeba."
 
 msgid "The pattern of timestamp format. For strings use "
-<<<<<<< HEAD
 msgstr "Vzorec formátu časové značky. Pro stringy použijte "
-=======
-msgstr "Vzorec formátu časové značky. Pro stringy použijte"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid ""
 "The periodicity over which to pivot time. Users can provide\n"
@@ -9944,11 +9877,7 @@ msgstr ""
 "    Check the JSON metadata in the Advanced settings"
 
 msgid "This column might be incompatible with current dataset"
-<<<<<<< HEAD
 msgstr "Sloupec může být nekompatibilní s tímto datasetem"
-=======
-msgstr "Sloupec může být nekompatibilní s tímto datasetem."
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "This column must contain date/time information."
 msgstr "Sloupec musí obsahovat časovou informaci."
@@ -10844,11 +10773,7 @@ msgid "Virtual"
 msgstr "Virtuální"
 
 msgid "Virtual (SQL)"
-<<<<<<< HEAD
 msgstr "Virtuá (SQL)"
-=======
-msgstr "virtuální (SQL)"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Virtual dataset"
 msgstr "Virtuální datová sada"
@@ -10977,11 +10902,7 @@ msgid "Web"
 msgstr "Web"
 
 msgid "Wednesday"
-<<<<<<< HEAD
 msgstr "Středa"
-=======
-msgstr "středa"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Week"
 msgstr "Týden"
@@ -11015,7 +10936,6 @@ msgstr "Hmotnost"
 
 msgid "We’re having trouble loading these results. Queries are set to timeout after %s second."
 msgid_plural "We’re having trouble loading these results. Queries are set to timeout after %s seconds."
-<<<<<<< HEAD
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] "Máme potíže s načítáním těchto výsledků. Dotazy jsou nastaveny na časový limit po %s sekundě."
@@ -11024,14 +10944,9 @@ msgid "We’re having trouble loading this visualization. Queries are set to tim
 msgid_plural "We’re having trouble loading this visualization. Queries are set to timeout after %s seconds."
 msgstr[0] ""
 msgstr[1] "Máme potíže s načítáním této vizualizace. Dotazy jsou nastaveny na časový limit po %s sekundě."
-=======
-msgstr[1] ""
-msgstr[2] ""
-msgstr[0] "Máme potíže s načítáním těchto výsledků. Dotazy jsou nastaveny na časový limit po %s sekundě."
 
 msgid "We’re having trouble loading this visualization. Queries are set to timeout after %s second."
 msgid_plural "We’re having trouble loading this visualization. Queries are set to timeout after %s seconds."
->>>>>>> cff72b9101 (added czech translation)
 msgstr[2] ""
 msgstr[0] "Máme potíže s načítáním této vizualizace. Dotazy jsou nastaveny na časový limit po %s sekundě."
 msgstr[1] ""
@@ -11340,11 +11255,7 @@ msgid "Y AXIS TITLE MARGIN"
 msgstr "OKRAJ NÁZVU OSY Y"
 
 msgid "Y Axis"
-<<<<<<< HEAD
 msgstr "Y Osa"
-=======
-msgstr "a Osa"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "Y Axis 2 Bounds"
 msgstr "Osa Y 2 Hranice"
@@ -11654,11 +11565,7 @@ msgid "`row_offset` must be greater than or equal to 0"
 msgstr "`row_offset` musí být větší nebo roven 0"
 
 msgid "`width` must be greater or equal to 0"
-<<<<<<< HEAD
 msgstr "\"šířka\" musí být větší nebo rovna 0"
-=======
-msgstr ""šířka\" musí být větší nebo rovna 0"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "add colors to cell bars for +/-"
 msgstr "přidat barvy do pruhů buněk pro +/-"
@@ -11938,18 +11845,11 @@ msgstr "např. world_population"
 
 msgid "e.g. xy12345.us-east-2.aws"
 msgstr "např. xy12345.us-východ-2.aws"
-<<<<<<< HEAD
 
 #, fuzzy
 msgid "e.g., a \"user id\" column"
 msgstr "e.g., a \"user id\" column"
 
-=======
-
-msgid "e.g., a \"user id\" column"
-msgstr "např. sloupec „ID uživatele“."
-
->>>>>>> cff72b9101 (added czech translation)
 msgid "edit mode"
 msgstr "k editaci nebo přidání sloupců a metrik"
 
@@ -12005,11 +11905,7 @@ msgid "flat"
 msgstr "byt"
 
 msgid "for more information on how to structure your URI."
-<<<<<<< HEAD
 msgstr "další informace o tom, jak strukturovat URI."
-=======
-msgstr "Další informace o tom, jak strukturovat URI."
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "function type icon"
 msgstr "ikona typu function"
@@ -12372,11 +12268,7 @@ msgid "x: values are normalized within each column"
 msgstr "x: hodnoty jsou normalizovány v každém sloupci"
 
 msgid "y"
-<<<<<<< HEAD
 msgstr "y"
-=======
-msgstr "a"
->>>>>>> cff72b9101 (added czech translation)
 
 msgid "y: values are normalized within each row"
 msgstr "y: hodnoty jsou normalizovány v každém řádku"
@@ -12385,8 +12277,4 @@ msgid "year"
 msgstr "frekvence podle začátku roku"
 
 msgid "zoom area"
-<<<<<<< HEAD
 msgstr "oblast přiblížení"
-=======
-msgstr "oblast přiblížení"
->>>>>>> cff72b9101 (added czech translation)
